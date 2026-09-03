@@ -1,0 +1,168 @@
+# ---------------------------------------------------------------------------
+# Personal site configuration for Junteng Liu
+# ---------------------------------------------------------------------------
+
+# Site Settings
+title: "Junteng Liu"
+SEOTitle: "Junteng Liu | PhD Candidate @ HKUST NLP"
+header:
+  image: ""
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: ""
+breadcrumbs: false
+date_format: "%B %d, %Y"
+locale: "en"
+words_per_minute: 200
+
+# Jekyll config
+url: "https://moncy69.github.io"
+baseurl: "/LJT-Homepage"
+repository: "moncy69/LJT-Homepage"
+default_theme: "default"
+gemoji: true
+
+# Site Author
+author:
+  name: "Junteng Liu"
+  avatar: "profile.png"
+  bio: "First-year PhD candidate at HKUST NLP Group, advised by Prof. Junxian He. Research interests: LLM Reasoning & RL, VLM Hallucination, LLM Truthfulness & Interpretability."
+  location: "Hong Kong, China"
+  employer: "Hong Kong University of Science and Technology"
+  email: "jliugi@connect.ust.hk"
+  github: "Vicent0205"
+  google_scholar: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
+  twitter: "junteng88716710"
+  uri: ""
+  bitbucket: ""
+  codepen: ""
+  dribbble: ""
+  facebook: ""
+  flickr: ""
+  foursquare: ""
+  goodreads: ""
+  instagram: ""
+  lastfm: ""
+  linkedin: ""
+  mastodon: ""
+  medium: ""
+  orcid: ""
+  pinterest: ""
+  soundcloud: ""
+  steam: ""
+  strava: ""
+  tumblr: ""
+  stackoverflow: ""
+  treehouse: ""
+  vk: ""
+  weibo: ""
+  whatsapp: ""
+  youtube: ""
+  wikipedia: ""
+
+# Collections — only publications is active
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+  talks:
+    output: false
+  teaching:
+    output: false
+  portfolio:
+    output: false
+
+# Reading Files
+include:
+  - _pages
+exclude:
+  - _posts
+  - _talks
+  - _teaching
+  - _portfolio
+  - _drafts
+  - Gemfile
+  - Gemfile.lock
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+  - jekyll-include-cache
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+  - jekyll-include-cache
+
+# Disable blog pagination
+paginate: 0
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      related: false
+  # Disable unused collections
+  - scope:
+      path: ""
+      type: talks
+    values:
+      published: false
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      published: false
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      published: false
